@@ -25,6 +25,7 @@ export class UserComponent {
   }
 
   buildUserForm(user: User) {
+    console.info(user)
     this.userForm = this.formBuilder.group({
       'name': new FormControl(user.name),
       'email': new FormControl(user.email)
