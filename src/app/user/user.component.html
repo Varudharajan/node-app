@@ -1,13 +1,25 @@
+<div *ngIf="user">
 <form [formGroup]="userForm">
-  <div>
+    <!--div>
+        <label for="id">ID</label>
+        <input formControlName="id" type="text" id="id">
+      </div-->
+    <div>
     <label for="name">Name</label>
     <input formControlName="name" type="text" id="name" required>
   </div>
-
   <div>
     <label for="email">E-mail</label>
     <input formControlName="email" type="email" id="email">
   </div>
-
-  <button [disabled]="!userForm.valid">Save</button>
+  <div>
+    <label for="username">Username</label>
+    <input formControlName="username" type="text" id="username">
+  </div>
+  <div>
+      <label for="city">City</label>
+      <input formControlName="city" type="text" id="city" required>
+    </div>
+  <button [disabled]="!userForm.valid" (click)="validateCity(user)">Save</button>
 </form>
+</div>
